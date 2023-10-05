@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moonquakes</title>
+
+  <link rel="shortcut icon" type="image/png" href="/images/favicon-256.png" />
+  <meta name="description" content="">
+  <meta name="keywords" content="moonquakes seismic nasa moon seismology">
+  <meta name="mobile-web-app-capable" content="yes" />
+  <!-- Android  -->
+  <meta name="theme-color" content="black">
+  <meta name="mobile-web-app-capable" content="yes">
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-title" content="Moonquakes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- Windows  -->
+  <meta name="msapplication-navbutton-color" content="black">
+  <meta name="msapplication-TileColor" content="black">
+  <meta name="msapplication-TileImage" content="/spaceeagles.png">
+  <!-- Pinned Sites  -->
+  <meta name="application-name" content="Moonquakes">
+  <meta name="msapplication-tooltip" content="View moonquakes on a 3D model of the moon.">
+  <meta name="msapplication-starturl" content="/">
+  <!-- Tap highlighting  -->
+  <meta name="msapplication-tap-highlight" content="no">
+  <!-- UC Mobile Browser  -->
+  <meta name="full-screen" content="yes">
+  <meta name="browsermode" content="application">
+  <!-- Disable night mode for this page  -->
+  <meta name="nightmode" content="enable/disable">
+  <!-- Layout mode -->
+  <meta name="layoutmode" content="fitscreen/standard">
+  <!-- imagemode - show image even in text only mode  -->
+  <meta name="imagemode" content="force">
+  <!-- Orientation  -->
+  <meta name="screen-orientation" content="portrait">
+
+  <!-- Main Link Tags  -->
+  <link href="/images/favicon-16.png" rel="icon" type="image/png" sizes="16x16">
+  <link href="/images/favicon-32.png" rel="icon" type="image/png" sizes="32x32">
+  <link href="/images/favicon-48.png" rel="icon" type="image/png" sizes="48x48">
+
+  <!-- iOS  -->
+  <link href="/images/touch-icon-iphone.png" rel="apple-touch-icon">
+  <link href="/images/touch-icon-ipad.png" rel="apple-touch-icon" sizes="76x76">
+  <link href="/images/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120">
+  <link href="/images/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152">
+
+  <!-- Startup Image  -->
+  <link href="/images/touch-icon-start-up-320x480.png" rel="apple-touch-startup-image">
+
+  <!-- Android  -->
+  <link href="/images/icon-192x192.png" rel="icon" sizes="192x192">
+  <link href="/images/icon-128x128.png" rel="icon" sizes="128x128">
+  <!-- Others -->
+  <link href="/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <!-- UC Browser  -->
+  <link href="/images/icon-52x52.png" rel="apple-touch-icon-precomposed" sizes="57x57">
+  <link href="/images/icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+  <!-- Splash screens -->
+  <link href="/images/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/images/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/images/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="/images/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="/images/splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/images/splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+  <link href="/images/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/images/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/images/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  <link href="/images/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+  
+  <!-- Manifest.json  -->
+  <link href="/manifest.json" rel="manifest">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/main.css" />
+</head>
+
+<body>
+  <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.145.0/build/three.module.js"
+        }
+      }
+    </script>
+  <script type="module" src="./static/main.js"></script>
+  <script>
+    let container, button;
+    document.addEventListener('DOMContentLoaded', (event) => {
+      container = document.getElementById("boxescontainer");
+      button = document.getElementById("menubutton");
+
+      if (window.innerWidth < 768) {
+        button.classList.toggle("change");
+        container.classList.toggle("open");
+      }
+    })
+    function toggleMenu(x) {
+      x.classList.toggle("change");
+      container.classList.toggle("open");
+    }
+
+  </script>
+  <div id="app">
+    <!-- TEAM SPACE EAGLES: Endrit, Krenar, Andi, Dijar, Jasir -->
+    <div class="menubutton change" onclick="toggleMenu(this)" id="menubutton">
+      <div class="container">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+    <div class="boxescontainer open" id="boxescontainer">
+      <div class="boxes" id="boxes">
+        <div class="filterbox">
+          <h3>LEGEND</h3>
+          <h5 style="font-weight: 400; opacity: .7; margin:0;">&#9432; Click to filter.</h5>
+          <div class="forms">
+            <p class="legend-p" id="shallow">
+              <span class="legend-span shallow-span"></span> 
+              Shallow Moonquakes
+            </p>
+			      <p class="legend-p" id="deep" >
+              <span class="legend-span deep-span"></span> 
+              Deep Moonquakes
+            </p>
+            <p class="legend-p" id="artificial">
+              <span class="legend-span ai-span"></span> 
+              Artificial Impacts
+            </p>
+          </div>
+
+        </div>
+        <div class="filterbox autorotate">
+          <div class="form-group">
+            <label for="rotate" style="cursor: pointer;">Auto-rotate <input type="checkbox" name="autorotate" checked
+                id="rotate" /></label>
+          </div>
+        </div>
+        <div class="filterbox">
+          <h3>Year: <span id="sliderYear"> All </span></h3>
+          <input type="range" min="1" max="100" value="100" class="slider" id="slider">
+        </div>
+		<div class="filterbox">
+				<h3>Change Size</h3>
+				<input style="width: 100%" type="range" min="1" max="4" value="2" id="sliderSize" />
+		</div>
+      </div>
+    </div>
+    <div class="infocontainer">
+      <div class="filterbox info" id="infoDiv">
+        <h3>SELECTED POINT</h3>
+        <h5 style="font-weight: 400; opacity: .7; margin:0;">&#9432; Hover over a point to select one.</h5>
+        <p id="yearp">Year: <br /><span id="year">&mdash;</span></p>
+        <p id="latp">Latitude: <br /><span id="lat">&mdash;</span></p>
+        <p id="longp">Longtitude: <br /><span id="long">&mdash;</span></p>
+        <p id="typep">Type: <br /><span id="type">&mdash;</span></p>
+		<p id="magnitudep"> <span id="magnitudes"> Magnitude: </span><br /> <span id="magnitude"> &mdash;</span> </p>
+      </div>
+    </div>
+    <div class="logo">
+      <img src="/images/spaceeagles.png" />
+    </div>
+  </div>
+
+</body>
+
+</html>
