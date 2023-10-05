@@ -71,18 +71,18 @@ const drawSphere = (x, y, testZ, color, size, data) => {
   sphere.position.y = y;
   sphere.position.z = testZ;
 
-  if (color === "#F63E02") {
+  if (color === "#FFD700") {
     smArr.push({sphere: sphere, data: data})
     spheres.push({sphere: sphere, data: data, type: "Shallow Moonquake"})
   }
 
-  if (color === "#41969F") {
+  if (color === "#0000FF") {
     const newData = {...data, year: "19" + data.year}
     aiArr.push({sphere: sphere, data: newData})
     spheres.push({sphere: sphere, data: newData, type: "Artificial Impace"})
   }
 
-  if (color === "#4E376D") {
+  if (color === "#FF0000") {
     dmArr.push({sphere: sphere, data: data})
     const newData = {...data, year:"No data."};
     spheres.push({sphere: sphere, data: newData, type: "Deep Moonquake"})
