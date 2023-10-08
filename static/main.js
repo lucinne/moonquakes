@@ -79,7 +79,7 @@ const drawSphere = (x, y, testZ, color, size, data) => {
   if (color === "#41969F") {
     const newData = {...data, year: "19" + data.year}
     aiArr.push({sphere: sphere, data: newData})
-    spheres.push({sphere: sphere, data: newData, type: "Artificial Impace"})
+    spheres.push({sphere: sphere, data: newData, type: "Artificial Impact"})
   }
 
   if (color === "#4E376D") {
